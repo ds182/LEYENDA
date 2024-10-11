@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEYENDA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Fondo negro para toda la página */
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .title-container {
+            background-image: url('https://i.ibb.co/44DDXyB/Dise-o-sin-t-tulo-17.png'); /* Fondo del contenedor */
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            width: 100%; /* Ocupa todo el ancho de la página */
+            border-radius: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle más efecto */
+        }
+
+        h1 {
+            font-size: 70px;
+            color: #b108c7; /* Color morado para el texto */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para dar efecto de flotación */
+            margin: 0;
+            animation: float 3s ease-in-out infinite; /* Efecto de flotación */
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .content {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            flex: 1;
+            max-width: 45%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .image-title {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff00aa; /* Color del título */
+            letter-spacing: 1px;
+            text-transform: uppercase; /* Letras en mayúsculas */
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: block; /* Cambiado a bloque para ocupar todo el ancho */
+            width: 100%; /* Ancho completo */
+            padding: 10px 0; /* Relleno ajustado */
+            margin-top: 10px; /* Margen superior */
+            background-color: #d5006d; /* Rosa mexicano */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #01ff16; /* Un poco más oscuro al pasar el mouse */
+        }
+
+        .button.active {
+            background-color: #1418ff; /* Verde fosforescente al hacer clic */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px; /* Ajuste del tamaño del texto para pantallas más pequeñas */
+            }
+
+            .title-container {
+                padding: 30px 0; /* Ajuste del relleno para pantallas más pequeñas */
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 90%;
+            }
+
+            iframe {
+                height: 240px; /* Ajuste del tamaño del video para pantallas pequeñas */
+            }
+
+            .image-title {
+                font-size: 18px; /* Ajuste del tamaño del título para pantallas más pequeñas */
+            }
+
+            .button {
+                font-size: 14px; /* Ajuste del tamaño del botón para pantallas más pequeñas */
+                padding: 8px 0; /* Ajuste del relleno del botón */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>LEYENDA</h1>
+    </div>
+
+    <div class="content-container">
+        <!-- Contenedor del video -->
+        <div class="content">
+            <iframe src="https://www.youtube.com/embed/xBGUxJDb4NU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Contenedor de la imagen y el título -->
+        <div class="content image-container">
+            <!-- Título antes del botón y la imagen -->
+            <div class="image-title">LAS LÁGRIMAS DE UN PERRO NEGRO</div> 
+
+            <!-- Botón con el ancho del contenedor -->
+            <button class="button" onclick="goToPage()">CLICK AQUÍ</button> 
+
+            <!-- Imagen debajo del botón -->
+            <img src="https://i.ibb.co/Pt9z1hv/Leonardo-Phoenix-a-moody-and-dimly-lit-cinematic-photograph-se-0.jpg" alt="Las lágrimas de un perro negro">
+        </div>
+    </div>
+
+    <script>
+        function goToPage() {
+            window.location.href = "https://ds182.github.io/TR-HALLOWEEN1/"; // Redirecciona a la página
+        }
+    </script>
+</body>
+</html>
